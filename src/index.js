@@ -1,9 +1,9 @@
 import store from "./store/store";
-import { bugAdded, bugResolved } from "./store/bugs";
+import { bugAdded, bugResolved, projectAdded } from "./store/projects";
 store.subscribe(() => {
   console.log("Store");
 });
-store.dispatch(bugAdded("bug1"));
-store.dispatch(bugResolved(1));
+store.dispatch(projectAdded({ name: "bug1" }));
+//store.dispatch(bugResolved({ id: 1 }));
 console.log(store.getState());
 //console.log(store.getState());
