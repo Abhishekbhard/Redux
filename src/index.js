@@ -1,5 +1,5 @@
-import store from "./customStore";
-import { bugAdded, bugResolved } from "./actions";
+import store from "./store/store";
+import { bugAdded, bugResolved } from "./store/bugs";
 store.subscribe(() => {
   console.log("Store");
 });
