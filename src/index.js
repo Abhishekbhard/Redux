@@ -1,5 +1,9 @@
 import store from "./store/store";
 import * as actions from "./store/api";
-import { addBug } from "./store/bugs";
+import { loadBugs, assignBugToUser } from "./store/bugs";
 
-store.dispatch(addBug({ description: "a" }));
+store.dispatch(loadBugs());
+
+setTimeout(() => {
+  store.dispatch(assignBugToUser(1, 4));
+}, 2000);
